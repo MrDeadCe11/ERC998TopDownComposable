@@ -1,6 +1,6 @@
-# Basic Sample Hardhat Project
+# ERC998 Top Down Composable and enumerable erc721 for Solidity ^0.8.0
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+This is an IERP998 Top down composable and enumerable erc721 for Solidity ^0.8.0
 
 Try running some of the following tasks:
 
