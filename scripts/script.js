@@ -21,7 +21,7 @@ async function main() {
 
   await erc998.deployed();
 
-  console.log("some unstaged changes", erc998.address);
+  console.log("some more unstaged changes", erc998.address);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
