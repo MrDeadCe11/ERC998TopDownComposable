@@ -3,7 +3,7 @@ pragma solidity ^0.8.2;
 
 import "hardhat/console.sol";
 import "./interfaces/IERC998ERC721TopDown.sol";
-import "./interfaces/ERC998ERC721TopDownEnumerable.sol";
+import "./interfaces/IERC998ERC721TopDownEnumerable.sol";
 import "@openzeppelin/contracts/interfaces/IERC721Receiver.sol";
 import "@openzeppelin/contracts/utils/math/SafeMath.sol";
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
@@ -26,10 +26,10 @@ interface IERC998ERC721BottomUp {
   ) external;
 }
 
-contract ERC998 is
+contract ERC998TopDownComposableEnumerable is
   IERC998ERC721TopDown,
+  IERC998ERC721TopDownEnumerable,
   ERC165,
-  ERC998ERC721TopDownEnumerable,
   ERC721,
   ERC721Enumerable,
   ERC721URIStorage,

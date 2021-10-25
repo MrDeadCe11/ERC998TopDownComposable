@@ -2,7 +2,7 @@
 pragma solidity ^0.8.2;
 
 ///  @dev The ERC-165 identifier for this interface is 0xa344afe4
-interface ERC998ERC721TopDownEnumerable {
+interface IERC998ERC721TopDownEnumerable {
 
   /// @notice Get the total number of child contracts with tokens that are owned by tokenId.
   /// @param _tokenId The parent token of child tokens in child contracts

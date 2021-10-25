@@ -4,7 +4,7 @@ const {
   isCallTrace,
 } = require("hardhat/internal/hardhat-network/stack-traces/message-trace");
 
-describe("Capture12", function () {
+describe("CustomERC721", function () {
   let owner;
   let addr1;
   let addr2;
@@ -13,7 +13,7 @@ describe("Capture12", function () {
   const testUri =
     "ipfs://bafybeihkoviema7g3gxyt6la7vd5ho32ictqbilu3wnlo3rs7ewhnp7lly/";
   before(async () => {
-    const Erc721 = await ethers.getContractFactory("Erc721");
+    const Erc721 = await ethers.getContractFactory("CustomERC721");
     [owner, addr1, addr2, ...addresses] = await ethers.getSigners();
     erc721 = await Erc721.deploy();
     await erc721.deployed();
