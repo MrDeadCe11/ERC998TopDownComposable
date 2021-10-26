@@ -22,11 +22,6 @@ describe("Carbon12Portfolio", function () {
     [owner, addr1, addr2, ...addresses] = await ethers.getSigners();
     erc998 = await ERC998TopDownComposableEnumerable.deploy();
     await erc998.deployed();
-
-    const Carbon12 = await ethers.getContractFactory("Capture12");
-    [owner, addr1, addr2, ...addresses] = await ethers.getSigners();
-    carbon12 = await Carbon12.deploy();
-    await carbon12.deployed();
   });
 
   it("should mint a parentNFT and a childNFT to the owner address", async function () {
