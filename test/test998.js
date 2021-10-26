@@ -23,10 +23,12 @@ describe("ERC998TopDownComposableEnumerable", function () {
     erc998 = await ERC998TopDownComposableEnumerable.deploy();
     await erc998.deployed();
 
+
     const CustomERC721 = await ethers.getContractFactory("CustomERC721");
     [owner, addr1, addr2, ...addresses] = await ethers.getSigners();
     erc721 = await CustomERC721.deploy();
     await erc721.deployed();
+
   });
 
   it("should mint a parentNFT and a childNFT to the owner address", async function () {
