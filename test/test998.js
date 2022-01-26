@@ -4,13 +4,13 @@ const {
   isCallTrace,
 } = require("hardhat/internal/hardhat-network/stack-traces/message-trace");
 
-describe("Carbon12Portfolio", function () {
+describe("ERC998TopDownComposableEnumerable", function () {
   let owner;
   let addr1;
   let addr2;
   let addresses;
   let erc998;
-  let carbon12;
+  let erc721;
   const testUri =
     "ipfs://bafybeihkoviema7g3gxyt6la7vd5ho32ictqbilu3wnlo3rs7ewhnp7lly/";
   let tokenCounter = 0;
@@ -22,6 +22,13 @@ describe("Carbon12Portfolio", function () {
     [owner, addr1, addr2, ...addresses] = await ethers.getSigners();
     erc998 = await ERC998TopDownComposableEnumerable.deploy();
     await erc998.deployed();
+
+
+    const CustomERC721 = await ethers.getContractFactory("CustomERC721");
+    [owner, addr1, addr2, ...addresses] = await ethers.getSigners();
+    erc721 = await CustomERC721.deploy();
+    await erc721.deployed();
+
   });
 
   it("should mint a parentNFT and a childNFT to the owner address", async function () {
